@@ -1,4 +1,0 @@
-80
-D:\ÑÑèÑ è ÏïÏ\pythonProject_WebServer
-8192
-html jpeg png gif

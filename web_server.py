@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-OPTIONS = (80, os.getcwd(), 8192, ['html', 'jpeg', 'png', 'gif'])
+OPTIONS = (80, os.getcwd(), 8192, ['html', 'jpg', 'png', 'gif'])
 HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 HDRS404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 HDRS403 = 'HTTP/1.1 403 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
@@ -78,7 +78,6 @@ def server_serving(sock: socket.socket, port: int) -> None:
         client_handling(sock)
     except KeyboardInterrupt:
         sock.close()
-        logger("Выключение сервера.")
 
 
 if __name__ == '__main__':
